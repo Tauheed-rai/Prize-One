@@ -1,0 +1,124 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrizeOne - Win an Oppo F15!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .container {
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="tel"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .note {
+            font-size: 0.9em;
+            color: #888;
+        }
+        .participants {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+        }
+        .image-container {
+            text-align: center;
+        }
+        .image-container img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Enter to Win an Oppo F15!</h1>
+
+        <!-- Oppo F15 Image -->
+        <div class="image-container">
+            <img src="https://www.example.com/oppo-f15-image.png" alt="Oppo F15">
+        </div>
+
+        <!-- Number of participants -->
+        <div class="participants">
+            <p>Number of participants: <strong id="participant-count">123</strong></p>
+        </div>
+
+        <p>Pay just 1 PKR to enter the draw and stand a chance to win an Oppo F15. Follow the instructions below:</p>
+
+        <h3>How to Enter</h3>
+        <ol>
+            <li>Send 1 PKR to our EasyPaisa account: <strong>03176308791</strong></li>
+            <li>Note down the transaction ID.</li>
+            <li>Fill in your details and submit the form below.</li>
+        </ol>
+
+        <form action="https://formspree.io/f/yourFormID" method="POST" onsubmit="incrementParticipantCount()">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact Number:</label>
+                <input type="tel" id="contact" name="contact" required>
+            </div>
+            <div class="form-group">
+                <label for="transaction">Transaction ID:</label>
+                <input type="text" id="transaction" name="transaction" required>
+            </div>
+            <input type="submit" value="Submit Entry">
+        </form>
+
+        <p class="note">Note: Winner will be chosen randomly once enough entries are received. Terms and conditions apply.</p>
+    </div>
+
+    <script>
+        // Function to increment the number of participants when the form is submitted
+        function incrementParticipantCount() {
+            // Get the current participant count
+            var currentCount = parseInt(document.getElementById('participant-count').innerText);
+
+            // Increment the count
+            currentCount++;
+
+            // Update the displayed participant count
+            document.getElementById('participant-count').innerText = currentCount;
+        }
+    </script>
+
+</body>
+</html>
